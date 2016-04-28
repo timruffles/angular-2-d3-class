@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>TODO</title>
+
+</head>
+<body>
+<h1>TODO</h1>
+
+<p>Here are our goals in the exercises today. They're intended to be chances to use what you've learned, not puzzles or enigmas, so if it's not clear what to do ask me!</p>
+
+<h2>TypeScript</h2>
+
+<p>All TypeScript work should be written in angular-2-exercise/typescript-exercise.</p>
+
+<p>Run <code>npm run exercise</code> to start an interactive session. Each change you make to a TypeScript file will recompile your code and run the <code>exercise</code> module.</p>
+
+<p>Write lots of <code>console.log()</code>s messages to yourself to test your understanding.</p>
+
+<ol>
+<li>typescript-vars
+
+<ol>
+<li>in: exercises/typescript.ts</li>
+<li>define a const as a number, and assign it a string literal. What happens?</li>
+<li>define a const as an array of numbers, and assign it an empty array
+
+<ol>
+<li>then assign it an array of strings</li>
+</ol>
+</li>
+<li>define an object type with some properties. Create some vars with that type. Try and trick the compiler</li>
+<li>define some functions with:
+
+<ol>
+<li>typed params</li>
+<li>typed return types</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>import-export
+
+<ol>
+<li>in: exercises/typescript.ts and exercise/module.ts</li>
+<li>import <code>Greeter</code> from module - what compiler errors do you get?</li>
+<li>define a <code>Greeter</code> class in module.ts</li>
+<li>try out a few more import/exports</li>
+</ol>
+</li>
+<li>classes
+
+<ol>
+<li>in: exercises/typescript.ts and exercise/module.ts</li>
+<li>in module.ts, define a Header class, with 2 public properties</li>
+<li>import into typescript.ts, and create an instance</li>
+<li>how does the type checking feel? is it good at inferring things?</li>
+<li>define some private properties, and try to access them elsewhere</li>
+</ol>
+</li>
+</ol>
+
+
+<h2>Angular 2</h2>
+
+<p>All Angular 2 work should be written in angular-2-exercise/app.</p>
+
+<p>Run <code>npm start</code> to:</p>
+
+<ol>
+<li>compile your code in <code>/app</code> on change</li>
+<li>open a browser to a live-reloading page</li>
+<li><p>if you don't see what you expect, right click and click 'Inspect'. Then open the console tab</p></li>
+<li><p>hello-angular</p>
+
+<ol>
+<li>creating our first component
+
+<ol>
+<li>define our first component - <code>App</code> in <code>app/App.component.ts</code></li>
+<li>telling Angular it's a component
+
+<ol>
+<li>use the <code>@Component</code> decorator to make it select <code>&lt;app&gt;&lt;/app&gt;</code> tags</li>
+<li>give it a simple <code>template</code> so you can see it has worked</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>booting the application with our component
+
+<ol>
+<li>our component will be the root of the application's component tree</li>
+<li>define an <code>main.ts</code> - this will be responsible for starting the app</li>
+<li>import the <code>bootstrap</code> method - it's in <code>angular2/platform/browser</code></li>
+<li>import our <code>App</code> component</li>
+<li>call <code>bootstrap</code> with <code>App</code> to boot up the application</li>
+<li>You should see the HTML from your template</li>
+<li>Inspect the page - look for the <code>&lt;app&gt;</code> tag, it should have your HTML</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>template-powers
+
+<ol>
+<li>use this (<a href="https://angular.io/docs/ts/latest/cheatsheet.html">cheatsheet</a>) for reference - there's lots of syntax!</li>
+<li>displaying data
+
+<ol>
+<li>we want to display some data in our template</li>
+<li>define a <code>constructor</code> for your <code>App</code> component</li>
+<li>assign a string property with a name of your choice</li>
+<li>use the interpolation syntax to display it in the template</li>
+<li>also try out the interpolation syntax out with the <code>title=</code> attribute of an element. Hover over it to see the browser title popup - does the interpolation work?</li>
+</ol>
+</li>
+<li>configuring elements from data
+
+<ol>
+<li>we want to use Angular to change the color of an element, controlled by a property</li>
+<li>define a property holding an HTML colour string</li>
+<li>use the attribute syntax to bind that to the <code>color</code> style attribute of an element in your <code>App</code> template</li>
+</ol>
+</li>
+<li>responding to user input
+
+<ol>
+<li>we want to define a + and - button that makes an element's text size grow and shrink</li>
+<li>define a <code>fontSize</code> attribute on <code>App</code></li>
+<li>bind it to the <code>font-size</code> style property of an element</li>
+<li>define a <code>changeTextSize(delta: number)</code> method on <code>App</code></li>
+<li>create two <code>&lt;button&gt;</code> elements, one with a <code>+</code> and one <code>-</code></li>
+<li>use event listener syntax to listen to click events, with positive and negative deltas</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>component-tree
+
+<ol>
+<li>we want to make a component that'll control the display of a dataset</li>
+<li>define a new component called <code>ChartControl</code>, which binds to <code>&lt;chart-control&gt;</code> elements</li>
+<li>add in an <code>input type=range</code> in its template, and some text</li>
+<li>add <code>&lt;chart-control&gt;</code> into the template of <code>App</code></li>
+<li>what happens? Think about why</li>
+<li>we need to inform Angular we're using a custom component.</li>
+<li>import <code>ChartControl</code> into <code>App</code></li>
+<li>create a <code>directives</code> array in <code>App</code>'s component definition, and place <code>ChartControl</code> in that array</li>
+<li>you should now see your <code>ChartControl</code> component</li>
+</ol>
+</li>
+<li>input-output
+
+<ol>
+<li>passing in values
+
+<ol>
+<li>in <code>App</code>, define a <code>maxAge</code> property and assign <code>24 * 60 * 60 * 1000</code> to it</li>
+<li>using template syntax, pass in <code>maxAge</code> to the <code>ChartControl</code></li>
+<li>you should see Angular complain that <code>maxAge</code> is not a "known native property"</li>
+<li>why? we'll fix this in the next step</li>
+</ol>
+</li>
+<li>having our component accept input
+
+<ol>
+<li>we need to tell Angular our <code>chart-control</code> component has an input for that type</li>
+<li>in <code>ChartControl</code>, define an input called <code>maxAge</code>. Type it as a <code>number</code></li>
+<li>we'd like to see the value of our input for debugging</li>
+<li>add a <code>ngOnChanges(changes)</code> method, and <code>console.log(changes)</code></li>
+<li>bind the <code>maxAge</code> property to the range's <code>max=</code> attribute. It should set itself on load</li>
+</ol>
+</li>
+<li>listening to output
+
+<ol>
+<li>we want to listen to <code>filtered</code> events from <code>ChartControl</code> in <code>App</code>, and handle them</li>
+<li>listen to a <code>filtered</code> event on the <code>chart-control</code> element in <code>App</code>, handling it and passing the <code>$event</code> variable into a new <code>App</code> method called <code>setFilter</code></li>
+<li>you should see Angular complain that <code>filtered</code> is not a "known native property"</li>
+<li>why?</li>
+<li>we need to tell Angular we're emitting <code>filtered</code> events</li>
+<li>in <code>ChartControl</code>, define an output called <code>filtered</code>. It's an <code>EventEmitter</code>. Use the <a href="https://angular.io/docs/ts/latest/cheatsheet.html">cheatsheet</a> to remind yourself how</li>
+<li>define <code>setFilter</code> as a simple console logger - we'll get it to fire later</li>
+</ol>
+</li>
+<li>firing events
+
+<ol>
+<li>we want to fire <code>filtered</code> events each time the user configures our <code>ChartControl</code> via our <code>maxAge</code> slider</li>
+<li>we need to store the state of our filter - define a <code>filter</code> propert and initialize it with <code>maxAge: 0</code></li>
+<li>listen to the <code>change</code> event of our <code>input</code> in <code>ChartControl</code>. handling it with a <code>setMaxAge(maxAgeInput.value)</code>. You'll want to define a local variable <code>maxAgeInput</code> - use the cheat sheet</li>
+<li>in <code>setMaxAge(age: number)</code>, call <code>updateFilter({ maxAge: age })</code></li>
+<li>define <code>updateFilter(changes)</code> as a method that
+
+<ol>
+<li>uses <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"><code>Object.assign</code></a> to copy the current filter state, update it with changes, and reassign it to <code>filter</code></li>
+<li>then uses <code>emit</code> on our <code>filtered</code> output, passing the new filter as the event</li>
+</ol>
+</li>
+<li>when you move the maxAge slider, you should see your <code>setFilter</code> handler in <code>App</code> fire</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>http
+
+<ol>
+<li>creating a service to load reddit data
+
+<ol>
+<li>define a <code>Reddit.service</code> class, with a <code>frontpage</code> method</li>
+<li>import and ask for <code>Http</code> in the constructor and define it as a property</li>
+<li>import your new service into App, and ask for an instance of it in the constructor</li>
+<li>you should get an error - Angular doesn't know how to inject <code>Reddit</code> yet!</li>
+<li>to do this we need to do 2 things
+
+<ol>
+<li>tell Angular how to inject Reddit - import and use <code>@Injectable()</code> on <code>Reddit</code></li>
+<li>give Angular a provider for Reddit. In <code>App</code> define a <code>providers:</code> array on the <code>@Component</code>, and import and pass in <code>Reddit</code></li>
+</ol>
+</li>
+<li>you should now have a <code>reddit</code> property in <code>App</code></li>
+</ol>
+</li>
+<li>loading data
+
+<ol>
+<li>we want to implement <code>frontpage</code> in <code>Reddit</code></li>
+<li>make a get request to <code>https://www.reddit.com/.json</code> (yes the suffix looks weird - try it out in the browser)</li>
+<li>use <code>toPromise()</code> on the result</li>
+<li>log out the response via <code>.then((resp) =&gt; console.log(resp.json()))</code></li>
+<li>we need to return a transformed version of the response, with just the interesting data</li>
+<li>in the <code>.then()</code> handler, use <code>.map</code> to get just the <code>.data</code> properties of the story data, and return it from <code>.then</code></li>
+</ol>
+</li>
+<li><p>triggering our load</p>
+
+<ol>
+<li>in <code>App</code>, assign <code>this.stories</code> to the result of calling <code>reddit.frontpage</code></li>
+</ol>
+</li>
+<li><p>using <code>*ngFor</code></p>
+
+<ol>
+<li>I will take you through this step</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>routing
+
+<ol>
+<li>routing has a lot of moving parts, so I'll take you through this</li>
+</ol>
+</li>
+<li>d3
+
+<ol>
+<li>our final challenge!</li>
+<li>define a <code>Chart</code> service
+
+<ol>
+<li>import d3</li>
+<li>define a <code>render()</code> method, accepting an options object with <code>data</code> and <code>el</code></li>
+<li>write some d3 code to simply draw a circle per data item</li>
+</ol>
+</li>
+<li>define a <code>Chart</code> component
+
+<ol>
+<li>import the <code>Chart</code> service</li>
+<li>make its template a single svg node</li>
+<li>use <code>ElementRef</code> to get a reference to the root node</li>
+<li>call <code>render()</code> and ensure we see some data
+
+<ol>
+<li><code>data:</code> as with some dummy data (e.g [1,2,3])</li>
+<li><code>el:</code> as our elementRef, <code>.nativeElement.querySelector("svg")</code></li>
+</ol>
+</li>
+<li>define an <code>@Input()</code> to accept our <code>data</code> once we've loaded it</li>
+<li>replace your stubbed call with a call inside an <code>ngOnChanges</code> callback, passing in our <code>data</code> input</li>
+<li>now, once we change <code>.data</code>, we should see a rendered chart!</li>
+</ol>
+</li>
+<li>pass data into <code>Chart</code>
+
+<ol>
+<li>import <code>Chart</code> into <code>App</code></li>
+<li>place it in the template</li>
+<li>let's test our data input
+
+<ol>
+<li>assign a <code>.data</code> property, with stubbed data again</li>
+<li>pass it into the <code>data</code> input of our <code>Chart</code></li>
+<li>ensure our <code>Chart</code> renders correct</li>
+</ol>
+</li>
+<li>let's pass in real data
+
+<ol>
+<li>in the <code>App</code> handler for our Reddit request, reassign the <code>.data</code> property</li>
+<li>we should see circles appear for each story!</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>let's create a nice looking chart!</li>
+</ol>
+</li>
+</ol>
+
+</body>
+</html>

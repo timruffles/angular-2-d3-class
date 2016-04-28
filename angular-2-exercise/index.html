@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<base href="/">
+<title>Angular 2 TypeScript App</title>
+
+<style>
+  body {
+    padding: 2em;
+    font-family: sans-serif;
+  }
+</style>
+
+<body>
+
+  <app>Loading...</app>
+
+  <!-- Required polyfills (order matters) -->
+  <script src="/node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="/node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script src="/node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+  <script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="/node_modules/systemjs/dist/system.src.js"></script>
+  <script src="/node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="/node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="/node_modules/angular2/bundles/http.dev.js"></script>
+  <script src="/node_modules/angular2/bundles/router.dev.js"></script>
+
+  <script>
+   System.config({
+     map: {
+       d3: "/node_modules/d3/d3.js",
+     },
+     meta: {
+       "/node_modules/*": {
+         defaultExtension: 'js',
+         format: "cjs"
+       }
+     },
+     packages: {
+       app: {
+         defaultExtension: 'js'
+       },
+     },
+   });
+   System.import('app/main');
+  </script>
+
+</body>
