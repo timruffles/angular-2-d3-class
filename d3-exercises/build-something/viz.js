@@ -41,4 +41,9 @@ function vis(data) {
   tradesEnter.append("text")
     .style("text-anchor", "middle")
     .text(d => d.key)
+
+  tradesEnter.append("text")
+    .style("text-anchor", "middle")
+    .attr("dy", 18)
+    .text(d => d.values.length)
 }

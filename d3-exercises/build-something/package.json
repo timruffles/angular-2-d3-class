@@ -1,0 +1,14 @@
+{
+  "name": "build-something",
+  "version": "1.0.0",
+  "description": "",
+  "main": "d3.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.0.0"
+  }
+}
