@@ -8,11 +8,39 @@ d3.json("./data.json", function(err, data) {
 
   const formatted = nestByCountry.entries(data.TradeInfos);
 
+  console.log(toGraph(data));
 
   vis(formatted);
 });
 
+function toGraph(data) {
+  const trades = data.TradeInfos;
+
+  const nodes = {};
+  const links = [];
+
+  for(const t of trades) {
+    assign(nodes, t.Party);
+    assign(nodes, t.Counterparty);
+  }
+
+  for(const t of trades) {
+    links.push({
+      source: nodes[t.Party],
+      target: nodes[t.Counterparty],
+    })
+  }
+
+  return { nodes, links };
+
+  function assign(m, k) {
+    m[k] = m[k] || { name: k };
+  }
+}
+
 function vis(data) {
+
+  
 
   const trades = d3.select("svg")
     .selectAll(".tradeGroup")
